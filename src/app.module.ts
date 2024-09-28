@@ -6,9 +6,6 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { PokemonModule } from './pokemon/pokemon.module';
 import { CommonModule } from './common/common.module';
 import { SeedModule } from './seed/seed.module';
-import { Sequelize } from 'sequelize';
-import { SequelizeMethod } from 'sequelize/types/utils';
-import { SequelizeModule } from '@nestjs/sequelize';
 import { OdooModule } from './odoo/odoo.module';
 @Module({
   imports: [

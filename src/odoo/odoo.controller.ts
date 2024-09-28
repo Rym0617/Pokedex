@@ -10,4 +10,10 @@ export class OdooController {
     async getProducts() {
         return this.odooService.getProducts();
     }
+
+    @Post()
+    async createProduct() {
+      const result = await this.odooService.createProduct();
+      return result;
+    }
 }
