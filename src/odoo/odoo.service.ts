@@ -41,7 +41,7 @@ export class OdooService {
                     'product.product',
                     'search_read',
                     [[]],
-                    { fields: [ 'id', 'name' , 'list_price', 'qty_available' ] },
+                    { fields: [ 'id', 'name' , 'list_price', 'qty_available', 'detailed_type' ] },
                 ], ( err, products ) => {
                     if ( err ) return reject( err );
                     
@@ -76,19 +76,7 @@ export class OdooService {
             } );
 
         } );
-    } );
-      /* try {
-        
-        /* const result = await this.client.methodCall(
-          'product.product',
-          'create',
-          [productData],
-        );
-        return result; 
-    } catch (error) {
-      console.error('Error al crear el producto:', error);
-      throw error;
-    } */
+    } );    
     }
 
 }
