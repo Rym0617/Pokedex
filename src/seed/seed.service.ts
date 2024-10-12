@@ -18,7 +18,7 @@ export class SeedService {
     async executeSeed() {
 
        await this.pokemonModel.deleteMany( {} ); //borrar toda la coleccion
-        const { data } = await this.http.get<PokeResponse>('https://pokeapi.co/api/v2/pokemon?limit=650');
+        const  data  = await this.http.get<PokeResponse>('https://pokeapi.co/api/v2/pokemon?limit=650');
 
         const pokemonToInsert: { name: string, no: number }[] = [];
 
