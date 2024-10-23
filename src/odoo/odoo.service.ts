@@ -28,12 +28,6 @@ export class OdooService {
                     return reject ( err );
                 }
 
-                /* const modelsClient = xmlrpc.createClient( { 
-                    host: '127.0.0.1',
-                    port: 8069,
-                    path: '/xmlrpc/2/object',
-                } ); */
-
                this.modelsClient.methodCall( 'execute_kw', [
                     this.db,
                     uid,
